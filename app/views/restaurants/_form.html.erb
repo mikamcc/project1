@@ -1,0 +1,23 @@
+<%= form_for @restaurant do |f| %>
+<fieldset>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</fieldset>
+<fieldset>
+  <%= f.label :summary %>
+  <%= f.text_field :summary %>
+</fieldset>
+<fieldset>
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+</fieldset>
+<fieldset>
+<%= f.label :opening_hours %>
+<%= f.text_field :opening_hours %>
+</fieldset>
+<fieldset>
+<%= f.label :vegan_option %>
+<%= f.text_field :vegan_option %>
+</fieldset>
+<%= f.submit %>
+<% end %>

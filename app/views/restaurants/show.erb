@@ -1,0 +1,21 @@
+<h2><%= @.name %></h2>
+
+<div>
+  <%= link_to 'Edit This Restaurna', author_path(@author) %>
+  |
+  <%= link_to 'Delete This Restaurant', author_path(@author), method: 'delete' %>
+</div>
+
+
+<br>
+<strong>Nationality:</strong> <%= @author.nationality %><br>
+<strong>Date of Birth:</strong> <%= @author.dob %><br>
+
+<h4>Books:</h4>
+<ul>
+<% @author.books.each do |book| %>
+  <li>
+    <%= link_to book.title, book_path(book.id) %>
+  </li>
+<% end %>
+</ul>
