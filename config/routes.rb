@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :images
   resources :users
 
+  root to: 'restaurants#index'
+
   get "/login" => "session#new"  #login form
   post "/login" => "session#create" #form submit here to perform login ans set session
   delete "/login" => "session#destroy"  #logout(delete session)

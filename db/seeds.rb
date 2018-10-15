@@ -8,21 +8,21 @@
 
 Restaurant.destroy_all
 
-r1 = Restaurant.create name:'Chaco Bar', summary:'TBC', location:'Darlinghurst', opening_hours:'Wed - Sat, 11:30 - 14:30, Mon 17:30 - 21:00', vegan_option: 0
+r1 = Restaurant.create name:'Chaco Bar', summary:'TBC', location:'Darlinghurst', opening_hours:'Wed - Sat, 11:30 - 14:30, Mon 17:30 - 21:00', vegan_option: 0, restaurant_image: "http://placekitten.com/300/300"
 
-r2 = Restaurant.create name:'Gogyo', summary:'TBC', location:'Surry Hills', opening_hours:'Mon – Fri: 12:00 - 15:00, 17:30 - 22:00, Saturday: 11:30 - 15:00, 17:30 - 22:00, Sunday: 11:30 - 15:00, 17:00 - 20:30', vegan_option: 1
+r2 = Restaurant.create name:'Gogyo', summary:'TBC', location:'Surry Hills', opening_hours:'Mon – Fri: 12:00 - 15:00, 17:30 - 22:00, Saturday: 11:30 - 15:00, 17:30 - 22:00, Sunday: 11:30 - 15:00, 17:00 - 20:30', vegan_option: 1, restaurant_image: "http://placekitten.com/300/300"
 
-r3 = Restaurant.create name:'Gumshara', summary:'TBC', location:'Haymarket', opening_hours:'Mon – Sat: 11:30 - 21:00, Sun - Mon:11:30 - 20:30', vegan_option: 0
+r3 = Restaurant.create name:'Gumshara', summary:'TBC', location:'Haymarket', opening_hours:'Mon – Sat: 11:30 - 21:00, Sun - Mon:11:30 - 20:30', vegan_option: 0, restaurant_image: "http://placekitten.com/300/300"
 
-r4 = Restaurant.create name:'Ichi-ban Boshi', summary:'TBC', location:'Sydney', opening_hours:'Mon – Sun: 11:00 - 22:30', vegan_option: 1
+r4 = Restaurant.create name:'Ichi-ban Boshi', summary:'TBC', location:'Sydney', opening_hours:'Mon – Sun: 11:00 - 22:30', vegan_option: 1, restaurant_image: "http://placekitten.com/300/300"
 
-r5 = Restaurant.create name:'Ippudo', summary:'TBC', location:'Sydney', opening_hours:'Mon – Sun: 11:00 - 22:30', vegan_option: 1
+r5 = Restaurant.create name:'Ippudo', summary:'TBC', location:'Sydney', opening_hours:'Mon – Sun: 11:00 - 22:30', vegan_option: 1, restaurant_image: "http://placekitten.com/300/300"
 
-r6 = Restaurant.create name:'Ramen Manpuku', summary:'TBC', location:'Kingsford', opening_hours:'Tue – Sat: 11:00 - 21:30', vegan_option: 1
+r6 = Restaurant.create name:'Ramen Manpuku', summary:'TBC', location:'Kingsford', opening_hours:'Tue – Sat: 11:00 - 21:30', vegan_option: 1, restaurant_image: "http://placekitten.com/300/300"
 
-r7 = Restaurant.create name:'RaRa', summary:'TBC', location:'Redfern', opening_hours:'Tue – Sun: Lunch:12:00 - 14:30, Dinner:17:30 - 22:00', vegan_option: 1
+r7 = Restaurant.create name:'RaRa', summary:'TBC', location:'Redfern', opening_hours:'Tue – Sun: Lunch:12:00 - 14:30, Dinner:17:30 - 22:00', vegan_option: 1, restaurant_image: "http://placekitten.com/300/300"
 
-r8 = Restaurant.create name:'Yasaka', summary:'TBC', location:'Sydney', opening_hours:'Mon -Sat: 11:30 - 22:00, Sun: 11:30 - 21:00', vegan_option: 1
+r8 = Restaurant.create name:'Yasaka', summary:'TBC', location:'Sydney', opening_hours:'Mon -Sat: 11:30 - 22:00, Sun: 11:30 - 21:00', vegan_option: 1, restaurant_image: "http://placekitten.com/300/300"
 
 
 puts "Created #{Restaurant.all.length} restaurants"
