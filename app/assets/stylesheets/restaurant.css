@@ -1,0 +1,23 @@
+.ramenImages {
+
+}
+
+
+
+/* div{
+  display: grid;
+  padding: 20px; */
+  /* background: #fff; */
+  /* grid-template-columns: 200px auto 200px auto 200px auto 200px auto; */
+  /* grid-template-rows: 150px 85px; */
+  /* grid-column-gap:10px;
+  grid-row-gap:50px;
+} */
+
+
+.ramenImages{
+  background: white;
+padding: 30px;
+/* height: 30vh;
+width: 15vw; */
+}

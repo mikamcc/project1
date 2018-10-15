@@ -1,2 +1,29 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h2><%= @user.name %></h2>
+
+
+<div>
+  <%= link_to 'Edit This User', user_path(@user) %>
+  |
+  <%= link_to 'Delete This User', user_path(@user), method: 'delete' %>
+</div>
+
+<br>
+
+<h4>Restaurants</h4>
+<ul>
+<% @restaurants.each do |restaurant| %>
+  <li><strong>Restaurant:</strong> <%= restaurant.name %><br>
+  <strong>Summary:</strong> <%= restaurant.summary %></li><br>
+<% end %>
+</ul>
+
+<h4>Images</h4>
+<ul>
+<% @user.images.each do |image| %>
+  <li>
+    <%= link_to restaurant_path(image.restaurant.id) do %>
+      <%= image_tag image.image%>
+    <% end  %>
+  </li>
+<% end %>
+</ul>

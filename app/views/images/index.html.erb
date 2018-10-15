@@ -1,2 +1,6 @@
-<h1>Images#index</h1>
-<p>Find me in app/views/images/index.html.erb</p>
+<h2>All Images</h2>
+<% @images.each do |image| %>
+  <%= link_to restaurant_path(image.restaurant.id) do %>
+    <%= image_tag image.image%>
+  <% end  %>
+<% end %>

@@ -1,2 +1,29 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+
+<h2><%= @restaurant.name %></h2>
+
+<div>
+  <%= link_to 'Edit This Restaurant', edit_restaurant_path(@restaurant) %>
+  |
+  <%= link_to 'Delete This Restaurant', restaurant_path(@restaurant), method: 'delete' %>
+</div>
+
+<br>
+<strong>Restaurant:</strong> <%= @restaurant.name %><br>
+<strong>Summary:</strong> <%= @restaurant.summary %><br>
+
+<!-- <h4>Images:</h4> -->
+
+<% @restaurant.images.each do |image| %>
+
+    <%= link_to image_path(image.id) do %>
+      <%= image_tag image.image, class: 'showThumb' %>
+    <% end  %>
+
+<% end %>
+
+<!--
+version 1: link_to LINK_TEXT_HERE, book_path(book.id)
+version 2: link_to book_path(book.id) do
+             EVERYTHING IN HERE IS THE CLICKABLE LINK
+           end
+         -->

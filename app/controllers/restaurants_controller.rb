@@ -6,7 +6,7 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    Restaurant.create( restaurant_params)
+    Restaurant.create(restaurant_params)
   end
 
 
@@ -21,11 +21,12 @@ class RestaurantsController < ApplicationController
 
   #UPDATE ############################################
   def edit
-    @Restaurant = Restaurant.find params[:id]
+    @restaurant = Restaurant.find params[:id]
   end
 
   def update
-    @Restaurant = Restaurant.find params[:id]
+    @restaurant = Restaurant.find params[:id]
+    redirect_to(restaurants_path(restaurant.id))
   end
 
   # DELETE ############################################

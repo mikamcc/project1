@@ -68,8 +68,32 @@ puts "Done!"
 
 User.destroy_all
 
-u1 = User.create name:'Mika', email:'mika@ga.co', password:'chicken'
-u2 = User.create name:'Lisa', email:'lisa@ga.co', password:'chicken'
-u3 = User.create name:'Taro', email:'taro@ga.co', password:'chicken'
+u1 = User.create name:'Mika', email:'mika@ramen.co', password:'chicken'
+u2 = User.create name:'Lisa', email:'lisa@ramen.co', password:'chicken'
+u3 = User.create name:'Taro', email:'taro@ramen.co', password:'chicken'
+u4 = User.create name:'George', email:'george@ramen.co', password:'chicken'
+u5 = User.create name:'Karyn', email:'karyn@ramen.co', password:'chicken'
 
 puts "Created #{User.all.length} users"
+
+
+r1.images << i1 << i2 << i3
+r2.images << i4 << i5
+r3.images << i6 << i7
+r4.images << i8 << i9
+r5.images << i10 << i11
+r6.images << i12 << i13
+r7.images << i14<< i15
+r8.images << i16 << i17
+
+u1.restaurants << r1 << r2
+u2.restaurants << r3 << r4
+u3.restaurants << r5
+u4.restaurants << r6 << r7
+u5.restaurants << r8
+
+u1.images << i1 << i2 <<i3
+u2.images << i4 << i5 << i6 << i7
+u3.images << i8 << i9
+u4.images << i10 << i11 << i12 << i13
+u5.images << i14 << i15 << i16 << i17
