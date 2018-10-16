@@ -1,4 +1,6 @@
-<%= form_for @restaurant do |f| %>
+
+
+<%= form_for @restaurant, html: {multipart: true} do |f| %>
 <fieldset>
   <%= f.label :name %>
   <%= f.text_field :name %>
@@ -16,8 +18,15 @@
 <%= f.text_field :opening_hours %>
 </fieldset>
 <fieldset>
+<%= f.label :restaurant_image %>
+<%= f.cl_image_upload :restaurant_image  %>
+</fieldset>
+<fieldset>
 <%= f.label :vegan_option %>
 <%= f.text_field :vegan_option %>
 </fieldset>
 <%= f.submit %>
 <% end %>
+
+
+#

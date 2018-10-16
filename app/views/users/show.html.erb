@@ -8,11 +8,14 @@
   |
   <%= link_to 'Create New Restaurant',
   new_restaurant_path %>
+  |
+  <%= link_to 'Add an Image to a Restaurant',
+  new_restaurant_path %>
 </div>
 
 <br>
 
-<h4>Restaurants</h4>
+<h4>Restaurant you created</h4>
 <ul>
 <% @restaurants.each do |restaurant| %>
   <li><strong>Restaurant:</strong> <%= restaurant.name %><br>

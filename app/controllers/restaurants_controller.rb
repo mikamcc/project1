@@ -7,6 +7,15 @@ class RestaurantsController < ApplicationController
 
   def create
     Restaurant.create(restaurant_params)
+    #Cloudinary upload happens between .new and save
+    #was a file actually uploaded?
+
+    if params[:file].present?
+      response = Cloudinary::Uploader.upload params[:file]
+      @restaurant.image = response["public_id"]
+      @restaurant.save
+    end #???????????????
+    redirect_to restaurant_path
   end
 
 
