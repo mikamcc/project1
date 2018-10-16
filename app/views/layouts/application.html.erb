@@ -15,19 +15,26 @@
 
     <nav>
         <%= link_to 'Home', restaurants_path %>
+        |
+        <%= link_to 'All Pictures', images_path %>
+
         <% if @current_user.present? %>
         |
-        Welcome, <%= @current_user.name %>
+        Welcome, <%= link_to @current_user.name, user_path(@current_user) %>
         |
         <%= link_to 'All Users', users_path %>
+        |
+        <%= link_to 'Create New Restaurant',
+        new_restaurant_path %>
+        |
+        <%= link_to 'Add an Image to a Restaurant',
+        new_image_path %>
         |
         <%= link_to 'Logout', login_path, method: 'delete' %>
 
         <br>
       <% else %>
-        |
-        <%= link_to 'All Pictures', images_path %>
-        |
+
         <%= link_to 'Login', login_path %>
         |
         <%= link_to 'Sign up', new_user_path %>

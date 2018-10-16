@@ -6,13 +6,12 @@ class ImagesController < ApplicationController
   #CREATE part 2: submit form
   def create
 
+    @image = Image.new title: params[:title]
 
-
-
-  #CREATE has no template
-  #redirect to index page
+    @image.user_id = @current_user.id
+    @image.restaurant_id = params[:id]
+    @image.save
   end
-
 
   #READtype 1: Index for all itmes in 'planets'
   def index
@@ -28,6 +27,10 @@ class ImagesController < ApplicationController
   end
 
   def update
+    if params[:file].present?
+      response = Cloudinary::Uploader.upload params[:file]
+      @restaurant.restaurant_image = response["public_id"]
+    end
   end
 
   def destroy

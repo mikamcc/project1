@@ -15,6 +15,10 @@
 <strong>Vegan Option:</strong> <%= @restaurant.vegan_option %><br>
 
 
+main image:
+<%= cl_image_tag @restaurant.restaurant_image %>
+
+<hr>
 
 <% @restaurant.images.each do |image| %>
 
@@ -23,6 +27,22 @@
     <% end  %>
 
 <% end %>
+
+<hr>
+<h3>Upload Your Own Image</h3>
+<%= form_tag upload_image_path(@restaurant.id), multipart: true do  %>
+
+  <%= label_tag :title %>
+  <%= text_field_tag :title, nil %>
+  <br>
+  <%= label_tag :image %>
+  <%= cl_image_upload_tag :image %>
+  <br>
+  <%= submit_tag 'Upload' %>
+
+<% end %>
+
+
 
 <!--
 version 1: link_to LINK_TEXT_HERE, book_path(book.id)

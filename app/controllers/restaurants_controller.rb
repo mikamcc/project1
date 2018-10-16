@@ -6,17 +6,19 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    Restaurant.create(restaurant_params)
+    @restaurant = Restaurant.new(restaurant_params)
     #Cloudinary upload happens between .new and save
     #was a file actually uploaded?
 
     if params[:file].present?
       response = Cloudinary::Uploader.upload params[:file]
-      @restaurant.image = response["public_id"]
-      @restaurant.save
+      @restaurant.restaurant_image = response["public_id"]
     end #???????????????
-    redirect_to restaurant_path
-  end
+
+    @restaurant.save
+    redirect_to restaurant_path(@restaurant)
+
+  end # create
 
 
 # READ ############################################
@@ -35,8 +37,15 @@ class RestaurantsController < ApplicationController
 
   def update
     @restaurant = Restaurant.find params[:id]
+
+    # cloudinary
+    if params[:file].present?
+      response = Cloudinary::Uploader.upload params[:file]
+      @restaurant.restaurant_image = response["public_id"]
+    end
+
     @restaurant.update restaurant_params
-    redirect_to restaurant_path
+    redirect_to restaurant_path(@restaurant)
   end
 
   # DELETE ############################################
