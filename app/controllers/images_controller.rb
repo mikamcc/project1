@@ -11,6 +11,7 @@ class ImagesController < ApplicationController
     @image.user_id = @current_user.id
     @image.restaurant_id = params[:id]
     @image.save
+    # redirect_to restaurant_path
   end
 
   #READtype 1: Index for all itmes in 'planets'

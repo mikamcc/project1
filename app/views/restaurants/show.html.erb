@@ -25,13 +25,11 @@ main image:
     <%= link_to image_path(image.id) do %>
       <%= image_tag image.image, class: 'showThumb' %>
     <% end  %>
-
 <% end %>
 
 <hr>
 <h3>Upload Your Own Image</h3>
 <%= form_tag upload_image_path(@restaurant.id), multipart: true do  %>
-
   <%= label_tag :title %>
   <%= text_field_tag :title, nil %>
   <br>
