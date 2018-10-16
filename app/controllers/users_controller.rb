@@ -6,7 +6,9 @@ class UsersController < ApplicationController
 
   def create
     user = User.create user_params
-    redirect_to(users_path)
+    session[:user_id] = user.id
+    # raise "hell"
+    redirect_to restaurants_path
   end
 
 
@@ -28,12 +30,10 @@ class UsersController < ApplicationController
     restaurant = Restaurant.find params[:id]
     restaurant.update(
       name:params[:name],
-      summary:params[:summary],
-      location:params[:location],
-      opening_hours:params[:opening_hours],
-      vegan_option:params[:vegan_option]
+      email:params[:email],
+      password:params[:password]
     )
-    redirect_to(restaurant_path(restaurant.id))
+    redirect_to(user_path)
   end
 
   #DELETE###########################################

@@ -9,8 +9,9 @@ Rails.application.routes.draw do
 
   root to: 'restaurants#index'
 
+  #user login
   get "/login" => "session#new"  #login form
-  post "/login" => "session#create" #form submit here to perform login ans set session
+  post "/login" => "session#create" #form submit here to perform login and set session
   delete "/login" => "session#destroy"  #logout(delete session)
 
 

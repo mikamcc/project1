@@ -26,7 +26,8 @@ class RestaurantsController < ApplicationController
 
   def update
     @restaurant = Restaurant.find params[:id]
-    redirect_to(restaurants_path(restaurant.id))
+    @restaurant.update restaurant_params
+    redirect_to restaurant_path
   end
 
   # DELETE ############################################
@@ -36,4 +37,13 @@ class RestaurantsController < ApplicationController
 
     redirect_to(restaurants_path)
   end
-end
+
+
+  private
+  def restaurant_params
+    # This method ensures that the 'artist' key is set in the params hash, and then
+    # makes sure only the permitted columns are taken from the form (and saved to the database)
+    params.require(:restaurant).permit( :name, :summary, :location, :opening_hours, :vegan_option)
+  end
+
+end #class

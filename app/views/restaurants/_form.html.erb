@@ -20,8 +20,4 @@
 <%= f.text_field :vegan_option %>
 </fieldset>
 <%= f.submit %>
-<fieldset>
-  <%= f.label :restaurant_id, 'Restaurant' %>
-  <%= f.collection_select :restaurant_id, Restaurant.all, :id, :name, prompt: 'Please choose the restaurant'  %>
-</fieldset>
 <% end %>
