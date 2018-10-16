@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :restaurants
 
   resources :images
-  post "/restaurants/:id/images" => "images#create", as: "upload_image"
+  # post "/restaurants/:id/images" => "images#create", as: "upload_image"
 
   resources :users
 

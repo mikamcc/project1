@@ -7,6 +7,8 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
+    @restaurant.user= @current_user
+    @restaurant.save
     #Cloudinary upload happens between .new and save
     #was a file actually uploaded?
 

@@ -1,11 +1,11 @@
 
 <h2><%= @restaurant.name %></h2>
 
-<div>
+<!-- <div>
   <%= link_to 'Edit This Restaurant', edit_restaurant_path(@restaurant) %>
   |
   <%= link_to 'Delete This Restaurant', restaurant_path(@restaurant), method: 'delete' %>
-</div>
+</div> -->
 
 <br>
 <strong>Restaurant:</strong> <%= @restaurant.name %><br>
@@ -15,8 +15,8 @@
 <strong>Vegan Option:</strong> <%= @restaurant.vegan_option %><br>
 
 
-main image:
-<%= cl_image_tag @restaurant.restaurant_image %>
+<!-- main image:
+<%= cl_image_tag @restaurant.restaurant_image %> -->
 
 <hr>
 
@@ -27,18 +27,7 @@ main image:
     <% end  %>
 <% end %>
 
-<hr>
-<h3>Upload Your Own Image</h3>
-<%= form_tag upload_image_path(@restaurant.id), multipart: true do  %>
-  <%= label_tag :title %>
-  <%= text_field_tag :title, nil %>
-  <br>
-  <%= label_tag :image %>
-  <%= cl_image_upload_tag :image %>
-  <br>
-  <%= submit_tag 'Upload' %>
 
-<% end %>
 
 
 

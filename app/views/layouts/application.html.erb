@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <h1 class="bounceIn animated">Project 1 Title</h1>
+    <h1 class="">Project 1 Title</h1>
 
     <nav>
         <%= link_to 'Home', restaurants_path %>
@@ -22,8 +22,8 @@
         |
         Welcome, <%= link_to @current_user.name, user_path(@current_user) %>
         |
-        <%= link_to 'All Users', users_path %>
-        |
+        <!-- <%= link_to 'All Users', users_path %> -->
+        
         <%= link_to 'Create New Restaurant',
         new_restaurant_path %>
         |
