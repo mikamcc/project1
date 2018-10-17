@@ -1,12 +1,14 @@
-<h1>Ramen Restaurants </h1>
-<ul>
+<h1 class="project">Ramen Restaurants </h1>
+<div class="list">
+<!-- <ul> -->
   <% @restaurants.each do |restaurant| %>
-    <li>
+    <!-- <li> -->
       <a href="<%= restaurant_path(restaurant.id) %>">
         <%= restaurant.name %>
       <!-- </a>
       <%= restaurant.restaurant_image %> -->
-
-    </li>
+ <br>
+    <!-- </li> -->
     <% end %>
-</ul>
+<!-- </ul> -->
+</div>
