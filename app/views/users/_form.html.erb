@@ -1,4 +1,12 @@
 <%= form_for @user do |f| %>
+
+<% if flash[:error] %>
+<br>
+<strong><%= flash[:error] %></strong>
+<br>
+<% end %>
+
+
 <fieldset>
   <%= f.label :name %>
   <%= f.text_field :name %>

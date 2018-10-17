@@ -2,9 +2,6 @@
 <h2><%= @restaurant.name %></h2>
 
 
-
-
-
 <div>
   <% if @restaurant.user == @current_user %>
   <%= link_to 'Edit This Restaurant', edit_restaurant_path(@restaurant) %>

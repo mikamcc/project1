@@ -15,7 +15,19 @@ class RestaurantsController < ApplicationController
     end
 
     @restaurant.save
-    redirect_to restaurant_path(@restaurant)
+    # redirect_to restaurant_path(@restaurant)
+    #validation##############################################
+       if @restaurant.update(restaurant_params)
+            redirect_to new_restaurant_path(@restaurant)
+            #it goes to edit page. why?
+          else
+            flash[:errors] = @restaurant.errors.full_messages
+            render :edit
+          end
+    ##########################################################
+
+    # @restaurant.save
+    # redirect_to restaurant_path(@restaurant)
 
   end # create
 
@@ -42,7 +54,7 @@ class RestaurantsController < ApplicationController
          return
        end
 
-    # cloudinary
+    #cloudinary handle file upload######################
     if params[:file].present?
       response = Cloudinary::Uploader.upload params[:file]
       @restaurant.restaurant_image = response["public_id"]

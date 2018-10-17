@@ -9,6 +9,23 @@ class UsersController < ApplicationController
     session[:user_id] = user.id
     # raise "hell"
     redirect_to restaurants_path
+
+
+    #This part is from tunr
+    # user = User.create user_params #strong params
+    # #Account created succesfuly
+    #
+    # if user.persisted?
+    #   session[:user_id] = user.id
+    #   redirect_to user_path(user) #go to the show page for this user
+    # else
+    #   #Accoutn not created: show error
+    #
+    #   #set a flash key to show on the next page: it will be an array of error strings
+    #   flash[:errors] = user.errors.full_messages
+    #   redirect_to new_user_path #/users/new, show the form again (with errors)
+    # end
+    #tunr part ends
   end
 
 
