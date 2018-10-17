@@ -7,8 +7,8 @@ class ImagesController < ApplicationController
   def create
 
     @image = Image.new title: params[:title]
-
-    @image.user_id = @current_user.id
+    #add user assosiation
+    @image.user_id = @current_user
     @image.restaurant_id = params[:id]
 
     if params[:file].present?
