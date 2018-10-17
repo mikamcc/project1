@@ -26,7 +26,7 @@
 <% @user.images.each do |image| %>
   <!-- <li> -->
       <%= link_to restaurant_path(image.restaurant_id) do %>
-        <%= image_tag image.image%>
+        <%= cl_image_tag image.image%>
       <% end %>
   <!-- </li> -->
 <% end %>
