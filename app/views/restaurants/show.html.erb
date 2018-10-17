@@ -12,21 +12,40 @@
 <strong>Summary:</strong> <%= @restaurant.summary %><br>
 <strong>Location:</strong> <%= @restaurant.location %><br>
 <strong>Opening Hours:</strong> <%= @restaurant.opening_hours %><br>
-<strong>Vegan Option:</strong> <%= @restaurant.vegan_option %><br>
+<strong>Vegan Option:</strong>
+<%= @restaurant.vegan_option == 1 ? 'Yes' : "No" %>
 
+<br>
 
-<!-- main image:
-<%= cl_image_tag @restaurant.restaurant_image %> -->
+<%= cl_image_tag @restaurant.restaurant_image %>
 
 <hr>
 
 <% @restaurant.images.each do |image| %>
 
     <%= link_to image_path(image.id) do %>
-      <%= image_tag image.image, class: 'showThumb' %>
+      <%= cl_image_tag image.image, class: 'showThumb' %>
     <% end  %>
 <% end %>
 
+<hr>
+<h3>Upload Your Own Image</h3>
+
+<% if flash[:error].present? %>
+  <strong><%= flash[:error] %></strong>
+<% end %>
+
+
+<%= form_tag upload_image_path(@restaurant.id), multipart: true do  %>
+  <%= label_tag :title %>
+  <%= text_field_tag :title, nil %>
+  <br>
+  <%= label_tag :image %>
+  <%= cl_image_upload_tag :image %>
+  <br>
+  <%= submit_tag 'Upload' %>
+
+<% end %>
 
 
 

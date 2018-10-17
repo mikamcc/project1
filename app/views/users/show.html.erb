@@ -1,30 +1,33 @@
-<h2><%= @user.name %></h2>
+<h2><%= @user.name %>'s Page</h2>
 
 
-<div>
-  <%= link_to 'Edit This User', edit_user_path(@user) %>
+<!-- <div>
+  <%= link_to 'Edit This
+  ', edit_user_path(@user) %>
   |
   <%= link_to 'Delete This User', user_path(@user), method: 'delete' %>
-
-</div>
+</div> -->
 
 <br>
 
 <h4>Restaurant you created</h4>
-<ul>
+<ol>
 <% @restaurants.each do |restaurant| %>
-  <li><strong>Restaurant:</strong> <%= restaurant.name %><br>
-  <strong>Summary:</strong> <%= restaurant.summary %></li><br>
+  <li><strong>Restaurant:</strong> <%= restaurant.name %></li>
+  <strong>Summary:</strong> <%= restaurant.summary %><br>
+  <strong>Location:</strong> <%= restaurant.location %><br>
+  <strong>Opening Hours:</strong> <%= restaurant.opening_hours %><br>
+  <strong>Vegan Option:</strong> <%= restaurant.vegan_option %><br>
 <% end %>
-</ul>
+</ol>
 
 <h4>Images</h4>
-<ul>
+<!-- <ul> -->
 <% @user.images.each do |image| %>
-  <li>
+  <!-- <li> -->
       <%= link_to restaurant_path(image.restaurant_id) do %>
         <%= image_tag image.image%>
       <% end %>
-  </li>
+  <!-- </li> -->
 <% end %>
-</ul>
+<!-- </ul> -->

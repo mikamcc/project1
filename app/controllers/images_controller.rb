@@ -10,8 +10,17 @@ class ImagesController < ApplicationController
 
     @image.user_id = @current_user.id
     @image.restaurant_id = params[:id]
-    @image.save
-    # redirect_to restaurant_path
+
+    if params[:file].present?
+      response = Cloudinary::Uploader.upload params[:file]
+      @image.image = response["public_id"]
+      @image.save
+    else
+      #If user doesn't provide the image
+      flash[:error] = "Please provide the image"
+    end
+
+    redirect_to restaurant_path(params[:id])
   end
 
   #READtype 1: Index for all itmes in 'planets'
