@@ -1,6 +1,6 @@
 <h2>All Images</h2>
 <% @images.each do |image| %>
   <%= link_to restaurant_path(image.restaurant_id) do %>
-    <%= image_tag image.image%>
+    <%= cl_image_tag image.image%>
   <% end  %>
 <% end %>

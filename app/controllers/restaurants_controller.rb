@@ -37,6 +37,11 @@ class RestaurantsController < ApplicationController
   def update
     @restaurant = Restaurant.find params[:id]
 
+    unless @restaurant.user == @current_user
+         # redirect_to restaurants_path
+         return
+       end
+
     # cloudinary
     if params[:file].present?
       response = Cloudinary::Uploader.upload params[:file]
@@ -44,7 +49,15 @@ class RestaurantsController < ApplicationController
     end
 
     @restaurant.update restaurant_params
-    redirect_to restaurant_path(@restaurant)
+######################################################
+#validation
+    if @restaurant.update(restaurant_params)
+         redirect_to restaurant_path(@restaurant)
+       else
+         flash[:errors] = @restaurant.errors.full_messages
+         render :edit
+       end
+###########################################
   end
 
   # DELETE ############################################

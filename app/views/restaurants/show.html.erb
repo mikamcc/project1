@@ -35,8 +35,8 @@
 <% end %>
 
 <hr>
+<% if @current_user.present? %>
 <h3>Upload Your Own Image</h3>
-
 <% if flash[:error].present? %>
   <strong><%= flash[:error] %></strong>
 <% end %>
@@ -51,6 +51,7 @@
   <br>
   <%= submit_tag 'Upload' %>
 
+  <% end %>
 <% end %>
 
 
