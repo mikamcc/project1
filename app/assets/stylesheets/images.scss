@@ -2,6 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.all-images {
+  margin: 0 auto;
+  width: 90vw;
+  text-align: center;
+}
 img {
-  width: 30vw;
+  width: 25vw;
+  height: 20vw;
+  margin-top: 1vw;
+  margin-right: 1vw;
+}
+
+body {
+  margin-bottom: 10vw;
+}
+
+.image-title {
+  text-align: center;
+  margin-top: 15px;
+
 }

@@ -2,8 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
 .ramenImages{
   background: white;
 padding: 30px;
@@ -15,18 +13,39 @@ width: 15vw; */
   text-align: center;
   margin-top:30px;
   margin-bottom: 20px;
+  margin-top:30px;
+
 }
 
 .project {
   text-align: center;
+  font-size: 35px;
+  margin-bottom: 40px;
+  margin-top: 25px;
+
 
 }
 .list{
   text-align: center;
-  background-color: yellow;
   text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+
 }
 
 body {
-  align-items: center;
+    align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.name {
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+.restaurant-content {
+  margin-left: 20px;
+  margin-right: 20px;
 }

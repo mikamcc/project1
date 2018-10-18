@@ -1,5 +1,5 @@
 
-<h2><%= @restaurant.name %></h2>
+<h2 class="name"><%= @restaurant.name %></h2>
 
 
 <div>
@@ -11,13 +11,13 @@
 </div>
 
 <br>
-<strong>Restaurant:</strong> <%= @restaurant.name %><br>
+<div class="restaurant-content">
 <strong>Summary:</strong> <%= @restaurant.summary %><br>
 <strong>Location:</strong> <%= @restaurant.location %><br>
 <strong>Opening Hours:</strong> <%= @restaurant.opening_hours %><br>
 <strong>Vegan Option:</strong>
 <%= @restaurant.vegan_option == 1 ? 'Yes' : "No" %>
-
+</div>
 <br>
 
 <!-- <%= cl_image_tag @restaurant.restaurant_image %> -->
@@ -30,7 +30,6 @@
       <%= cl_image_tag image.image, class: 'showThumb' %>
     <% end  %>
 <% end %>
-
 <hr>
 <% if @current_user.present? %>
 <h3>Upload Your Own Image</h3>
