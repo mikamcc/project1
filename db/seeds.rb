@@ -25,9 +25,11 @@ GOGYO offers a wide selection of contemporary a la carte dishes designed to lead
 
 r3 = Restaurant.create name:'Gumshara', summary:"Gumshara Ramen is brought to you by Mori Higashida, a Japanese expat who longed for authentic ramen noodles in Sydney. So he quit his day job, went back to Japan and did an apprenticeship at the famous Muteppou noodle restaurant in Kyoto. He then returned to Sydney and set-up shop in Eating World food court in 2009.
 Most folks stopped by for the signature dish, tonkotsu ramen. The stock for the dish is made by simmering 120 kilograms of pork bones. Deliciously slippery ramen noodles and slices of pork are dipped into the steaming soup; a soft-boiled egg is an optional extra and becomes a meal in itself as it absorbs the thick pork broth.
+
 Other varieties on offer include miso ramen, shoyu ramen, garlic tonkotsu ramen, tomato tonkotsu ramen and pork spare rib ramen.", location:'Haymarket', opening_hours:'Mon – Sat: 11:30 - 21:00, Sun - Mon:11:30 - 20:30', vegan_option: 0, restaurant_image: "http://placekitten.com/300/300"
 
 r4 = Restaurant.create name:'Ichi-ban Boshi', summary:"This bustling Japanese eatery on the top floor of The Galeries has been filling people's stomachs with noodles for years now. And it shows no sign of slowing down – there's almost always a queue for tables, even outside normal meal times. But the wait's well worth it. Plus there's a perfect idling spot next door at Kinokuniya.
+
 It's mostly about the ramen here. Tokyo ramen is a good entry-level choice, with ramen noodles, slices of pork and an egg set in a soy broth. There's also miso, kimchi, tofu nori, wonton and karaage ramen varieties. Tantanmen is another favourite and features spicy pork mince dunked on top of lovely, slippery ramen noodles.
 
 Then there's the granddaddy of them all: tonkotsu ramen. This famous pork bone noodle soup is thick and rich and not for the faint of heart. Only 15 bowls are made each day, and it's not usually ready until the early afternoon, so plan ahead if that's what you're after. Besides every conceivable ramen variety, there are comforting bowls of udon noodles, crunchy karaage-don (crispy fried chicken) and some fun Japanese curry dishes. Wash it all down with an Asahi and you'll be awfully happy.
