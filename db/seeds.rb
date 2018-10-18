@@ -10,12 +10,16 @@
 Restaurant.destroy_all
 
 r1 = Restaurant.create name:'Chaco Bar', summary:"Chaco Bar is known for its Yakitori, but between midday and 2pm from Wednesday to Saturday, Chaco also serves a good brothy ramen. Just make sure you get in quick – it’s sometimes limited to 30 bowls.
+
 Though, this is not just any ramen--this is the real deal.  Owner and chef Keita Abe is from Fukuoka in Japan, the home of tonkotsu ramen.There are four flavours of ramen at Chaco Bar. Fat Soy boasts a chicken-base and is topped with melty charcoal pork chashu and a seasoned egg. Abe describes it almost like you would a tonkotsu: “It’s really strong, fatty, punchy, heavy.” Fish Salt is probably unlike anything you’ve had before, deriving from the soup known as ‘champon’, which was created in Nagasaki to feed Chinese students missing the taste of home. “Champon is not famous in the world yet,” says Abe, “This is the ramen of Nagasaki. It has lots of seafood, cabbage, and there’s pork chashu on top as well.”
+
 The next option is Chilli Coriander. It’s made up of a base of chicken and fish broth, topped with steamed chicken thigh, seasoned egg, house-made chilli oil and Japan’s equivalent of the Szechuan pepper: the sansho pepper, which is hot and numbing. The last ramen on offer is the Yuzu Salt, which Abe describes as “elegant and in a summery style.” It’s got that sour, citrusy flavour from the yuzu, with a chicken stock base and squid tentacles on top. Plus it’s topped off with yuzu infused butter. Hello…
+
 All of these bowls will be filled to the brim with Abe’s ramen, which he has made for him fresh, according to his own specific recipe.
 ", location:'Darlinghurst', opening_hours:'Wed - Sat, 11:30 - 14:30, Mon 17:30 - 21:00', vegan_option: 0, restaurant_image: "http://placekitten.com/300/300"
 
 r2 = Restaurant.create name:'Gogyo', summary:"GOGYO was orignally founded by Shigemi Kawahara, the internationally renowned “Ramen King” of IPPUDO fame, in 2003. With stores in Kyoto, Tokyo, Nagoya, Fukuoka, and Hong Kong, Surry Hills marks the 6th location for the brand. GOGYO Surry Hills is a casual-chic Japanese ramen bar and dining space that offers guests the opportunity to “start with drinks, taste a few ‘tsumami,’ and end with ramen.”
+
 GOGYO offers a wide selection of contemporary a la carte dishes designed to lead up to or complement the specialty ramen selection. Items from the a la carte kitchen range from shared snacks to sashimi dishes as well as robata grilled mains. GOGYO offers Kogashi-style ramen which involves a charring technique to bring out extremely fragrant and bittersweet results that can only be tasted in our establishments. Classic ramen as well as a vegetarian option are also available to cater to different preferences.
 ", location:'Surry Hills', opening_hours:'Mon – Fri: 12:00 - 15:00, 17:30 - 22:00, Saturday: 11:30 - 15:00, 17:30 - 22:00, Sunday: 11:30 - 15:00, 17:00 - 20:30', vegan_option: 1, restaurant_image: "http://placekitten.com/300/300"
 

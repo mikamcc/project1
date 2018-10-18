@@ -49,3 +49,16 @@ body {
   margin-left: 20px;
   margin-right: 20px;
 }
+
+.row > div {
+  // border: 1px solid red;
+}
+
+div.restaurant_show {
+  margin-left: 6vw;
+  margin-right: 6vw;
+}
+
+div.restaurant_show .row{
+  margin-top: 2vh;
+}

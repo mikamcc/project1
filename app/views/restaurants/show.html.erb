@@ -1,16 +1,72 @@
 
-<h2 class="name"><%= @restaurant.name %></h2>
+<div class="restaurant_show">
+
+  <h2 class="name"><%= @restaurant.name %></h2>
+
+  <div>
+    <% if @restaurant.user == @current_user %>
+    <%= link_to 'Edit This Restaurant', edit_restaurant_path(@restaurant) %>
+    |
+    <%= link_to 'Delete This Restaurant', restaurant_path(@restaurant), method: 'delete' %>
+    <% end %>
+  </div>
 
 
-<div>
-  <% if @restaurant.user == @current_user %>
-  <%= link_to 'Edit This Restaurant', edit_restaurant_path(@restaurant) %>
-  |
-  <%= link_to 'Delete This Restaurant', restaurant_path(@restaurant), method: 'delete' %>
+  <% @restaurant.images.each do |image| %>
+
+      <%#= link_to image_path(image.id) do %>
+        <%= cl_image_tag image.image, class: 'showThumb' %>
+      <%# end  %>
   <% end %>
-</div>
+
+  <div class="container">
+
+
+    <div class="row">
+     <div class="col-2 text-right">
+       <strong>Summary:</strong>
+     </div>
+     <div class="col-8">
+      <%= simple_format(@restaurant.summary) %>
+     </div>
+   </div><!-- end of div class="row" -->
+
+
+   <div class="row">
+    <div class="col-2 text-right">
+      <strong>Location:</strong>
+    </div>
+    <div class="col-8">
+     <%= @restaurant.location %>
+    </div>
+  </div><!-- end of div class="row" -->
+
+  <div class="row">
+   <div class="col-2 text-right">
+     <strong>Opening Hours:</strong>
+   </div>
+   <div class="col-8">
+    <%= @restaurant.opening_hours %>
+   </div>
+  </div><!-- end of div class="row" -->
+
+  <div class="row">
+   <div class="col-2 text-right">
+     <strong>Vegan option:</strong>
+   </div>
+   <div class="col-8">
+    <%= @restaurant.vegan_option == 1 ? 'Yes' : "No" %>
+   </div>
+  </div><!-- end of div class="row" -->
+
+
+
+  </div> <!-- end of div class="container"  -->
+
 
 <br>
+
+<!--
 <div class="restaurant-content">
 <strong>Summary:</strong> <%= @restaurant.summary %><br>
 <strong>Location:</strong> <%= @restaurant.location %><br>
@@ -18,18 +74,13 @@
 <strong>Vegan Option:</strong>
 <%= @restaurant.vegan_option == 1 ? 'Yes' : "No" %>
 </div>
+-->
 <br>
 
 <!-- <%= cl_image_tag @restaurant.restaurant_image %> -->
 
 <hr>
 
-<% @restaurant.images.each do |image| %>
-
-    <%= link_to image_path(image.id) do %>
-      <%= cl_image_tag image.image, class: 'showThumb' %>
-    <% end  %>
-<% end %>
 <hr>
 <% if @current_user.present? %>
 <h3>Upload Your Own Image</h3>
@@ -51,11 +102,11 @@
 <% end %>
 
 
-
-
 <!--
 version 1: link_to LINK_TEXT_HERE, book_path(book.id)
 version 2: link_to book_path(book.id) do
              EVERYTHING IN HERE IS THE CLICKABLE LINK
            end
          -->
+
+</div><!-- end of .restaurant_show -->
