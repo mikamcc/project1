@@ -13,12 +13,11 @@
 </ol>
 
 <h4>Images</h4>
-<!-- <ul> -->
+
 <% @user.images.each do |image| %>
-  <!-- <li> -->
+
       <%= link_to restaurant_path(image.restaurant_id) do %>
         <%= cl_image_tag image.image%>
       <% end %>
-  <!-- </li> -->
+
 <% end %>
-<!-- </ul> -->

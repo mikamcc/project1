@@ -6,8 +6,8 @@ class ImagesController < ApplicationController
   #CREATE part 2: submit form
   def create
 
-    @image = Image.new title: params[:title]
-    #add user assosiation
+    @image = Image.new title:params[:title]
+    # add user assosiation
     @image.user_id = @current_user
     @image.restaurant_id = params[:id]
 
